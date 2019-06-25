@@ -41,8 +41,8 @@ class TopicController extends Controller
     {
         $topic->delete();
         return [
-            'error'=>0,
-            'msg'=>''
+            'error' => 0,
+            'msg' => ''
         ];
     }
 

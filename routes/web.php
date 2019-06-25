@@ -84,7 +84,6 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/login', '\App\Admin\Controllers\LoginController@login');
 
 
-
     Route::group(['middleware' => 'auth:admin'], function () {
         //登出行为
         Route::get('/logout', '\App\Admin\Controllers\LoginController@logout');
@@ -120,14 +119,13 @@ Route::group(['prefix' => 'admin'], function () {
 
         Route::group(['middleware' => 'can:topic'], function () {
             //专题模块
-            Route::resource('topics', '\App\Admin\Controllers\TopicController',['only'=>'index
-','create','store','show','edit','update','destroy']);
+            Route::resource('topics', '\App\Admin\Controllers\TopicController');
         });
 
 
         Route::group(['middleware' => 'can:notice'], function () {
             //通知模块
-            Route::resource('notices', '\App\Admin\Controllers\NoticeController',['only'=>['index','create','store','show','edit','update','destroy']]);
+            Route::resource('notices', '\App\Admin\Controllers\NoticeController', ['only' => ['index', 'create', 'store', 'show', 'edit', 'update', 'destroy']]);
         });
     });
 
