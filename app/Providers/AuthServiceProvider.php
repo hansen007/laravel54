@@ -24,13 +24,13 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->registerPolicies();
-
-        $permissions = \App\AdminPermission::all();
-        foreach ($permissions as $permission){
-            Gate::define($permission->name,function ($user) use($permission){
-                return $user->hasPermission($permission);
-            });
-        }
+//        $this->registerPolicies();
+//
+//        $permissions = \App\AdminPermission::all();
+//        foreach ($permissions as $permission){
+//            Gate::define($permission->name,function ($user) use($permission){
+//                return $user->hasPermission($permission);
+//            });
+//        }
     }
 }
