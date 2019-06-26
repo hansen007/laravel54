@@ -12,6 +12,7 @@
 */
 
 Route::get('/', '\App\Http\Controllers\LoginController@welcome');
+Route::get('/admin', '\App\Admin\Controllers\LoginController@welcome');
 
 //Route::get('/hs', function () {
 //    //Route::any   Route::match

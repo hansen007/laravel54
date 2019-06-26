@@ -11,6 +11,10 @@ use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
+    public function welcome(){
+        return redirect('/admin/login');
+    }
+
     //登陆页
     public function index()
     {
