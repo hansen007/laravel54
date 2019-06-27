@@ -4,7 +4,7 @@
         <!-- /.search form -->
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
-{{--            @can("system")--}}
+            @can("system")
             <li class="treeview active">
                 <a href="#">
                     <i class="fa fa-dashboard"></i> <span>系统管理</span>
@@ -16,7 +16,7 @@
                     <li><a href="/admin/roles"><i class="fa fa-circle-o"></i> 角色管理</a></li>
                 </ul>
             </li>
-{{--            @endcan--}}
+            @endcan
             @can("post")
             <li class="active treeview">
                 <a href="/admin/posts">
