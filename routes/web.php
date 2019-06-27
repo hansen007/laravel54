@@ -91,7 +91,7 @@ Route::group(['prefix' => 'admin'], function () {
         //首页
         Route::get('/home', '\App\Admin\Controllers\HomeController@index');
 
-        Route::group(['middleware' => 'can:system'], function () {
+//        Route::group(['middleware' => 'can:system'], function () {
             //管理人员模块
             Route::get('/users', '\App\Admin\Controllers\UserController@index');
             Route::get('/users/create', '\App\Admin\Controllers\UserController@create');
@@ -110,7 +110,7 @@ Route::group(['prefix' => 'admin'], function () {
             Route::get('/permissions', '\App\Admin\Controllers\PermissionController@index');
             Route::get('/permissions/create', '\App\Admin\Controllers\PermissionController@create');
             Route::post('/permissions/store', '\App\Admin\Controllers\PermissionController@store');
-        });
+//        });
 
         Route::group(['middleware' => 'can:post'], function () {
             //审核模块
